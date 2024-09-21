@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="company-name">Demokart</div>   
+    </nav>
+    <section class="image-content">
+        <div class="carosuel">
+           
+             <div class="active-img">
+                 
+                  <button id="prev-button" class="carousel-button">&lt;</button>
+                     <img id="primary-img" src="" alt="product-img">
+                  <button id="next-button" class="carousel-button">&gt;</button>
+             </div>
+             <div id="thumbnails">
+                 <!--api populated-->
+             </div>
+        </div>
+        <div class="content">
+
+            <h3>Apple</h3>
+            <h2 class="product-name">MacBook Air 15″ Laptop</h2>
+            <p class="product-desc">
+                MacBook Air sails through work and play - and the M3 chip brings even greater capabilities and advanced AI features to this super-portable laptop. With up to 18 hours of battery life, you can blaze through whatever you're into all day long.
+               
+                <div class="price">
+                <span class="current-price">₹ 1,64,490  </span>
+                <span class="discount">-6%</span>
+              </div>
+              <div class="prev-price">₹174900</div>
+              <div class="product-color">
+                <p>Select Color:</p>
+                <div class="color-swatch " id="black" data-color="Black" ></div>
+                <div class="color-swatch active" id="white" data-color="White"></div>
+              </div>
+
+              <p class="quantity">Quantity:</p> 
+            <div class="cart-quantity">
+                
+                <div class="quantity-selector">
+                    
+                        <button id="decrease-quantity">-</button>
+                        <span id="product-quantity">1</span>
+                        <button id="increase-quantity">+</button>
+                </div>
+                <div class="cart-actions">
+                    <button id="add-to-cart">Add to Cart</button>
+                    <span id="cart-message"></span> <!-- Display a confirmation message -->
+                </div>
+            </div>
+           
+
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

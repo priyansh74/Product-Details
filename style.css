@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #333;
+    color: rgb(242, 242, 242);
+    font-weight: 400;
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+/* Carousel images */
+.image-content {
+    display: flex;
+    padding: 2%;
+}
+
+#primary-img {
+    height: 375px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.active-img {
+  margin-bottom: 10px;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  position: relative; 
+}
+
+
+.carosuel {
+    padding: 4% 10%;
+    flex: 1; 
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 50px;
+    padding-left: 0px;
+}
+
+.carousel-button {
+    
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7); 
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 0px;
+    z-index: 10;
+     
+}
+
+.carosuel-image {
+  width: auto;
+  height: 75px;
+  border-radius: 10px; 
+  
+  background-size: cover; 
+  transition: border 0.3s;
+}
+
+.active-thumbnail {
+  border: 3px solid orange; /* Orange border for the active thumbnail */
+  border-radius: 10px; 
+}
+
+#thumbnails {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    padding-right: 52px;
+}
+
+/* Content */
+.content {
+    flex: 1; /* Allow the content to grow */
+    padding: 4% 1%;
+}
+
+.content h3 {
+    font-size: 20px;
+    color: orange;
+}
+
+.content h2 {
+    font-size: 37px;
+    margin: 20px 0 40px 0;
+}
+
+.content p {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 0px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.current-price {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+    border-radius: 10%;
+    height: 25px;
+    background-color: gray;
+    font-weight: 700;
+    color: black;
+}
+
+.prev-price {
+    margin: 10px 0 35px 0;
+    font-size: 18px;
+    color: blue;
+    font-weight: 700;
+    text-decoration: line-through;
+    color: #828282;
+    margin-bottom: 10px;
+}
+
+.product-color p {
+    margin-bottom: 10px;
+}
+
+.color-swatch {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+#black {
+    background-color: black;
+}
+
+#white {
+    background-color: white;
+    border: 1px solid #ccc; /* Add a border for visibility */
+}
+
+.color-swatch.active {
+    border: 3px solid orange !important; /* Active color swatch border */
+}
+
+/* Styling for quantity selector */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+.quantity-selector button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+.quantity-selector span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Styling for Add to Cart button */
+.cart-actions {
+    margin-top: 20px;
+}
+
+#add-to-cart {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#cart-message {
+    margin-left: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+.cart-quantity {
+    display: flex;
+}
+
+/* Responsive styles */
+@media (min-width: 769px) {
+    .image-content {
+        flex-direction: row; /* Side by side on larger screens */
+    }
+
+    .active-img {
+        max-width: 50%; 
+    }
+
+    .content {
+        max-width: 50%;
+    }
+    
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company-name {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    
+    #thumbnails {
+        display: none;
+    }
+
+    
+    #primary-img {
+        height: auto;
+        max-width: 100%; 
+    }
+
+    .carousel-button {
+        padding: 8px; 
+    }
+    .image-content {
+        flex-direction: column; 
+    }
+    .company-name {
+      font-size: 30px; 
+  }
+
+}
